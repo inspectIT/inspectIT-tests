@@ -1,0 +1,9 @@
+<ivysettings>
+	<settings defaultResolver="novatec-nexus" />
+	<resolvers>
+		<chain name="novatec-nexus">
+			<ibiblio name="Nexus@NT" m2compatible="true" root="http://nexus.novatec-gmbh.lan/content/groups/public/" usepoms="true" />
+		</chain>
+	</resolvers>
+</ivysettings>
+

@@ -1,0 +1,58 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="inspectIT Test">
+	<test name="SQL Features">
+		<classes>
+			<class
+				name="test.info.novatec.inspectit.sql.SQLFeatures" />
+		</classes>
+	</test>
+	<test name="HTTP Features">
+		<classes>
+			<class
+				name="test.info.novatec.inspectit.http.HttpFeatures" />
+		</classes>
+	</test>
+	<test name="Exception Features">
+		<classes>
+			<class
+				name="test.info.novatec.inspectit.exceptions.ThrowExceptions" />
+		</classes>
+	</test>
+	<test name="Excluded Files Features">
+		<classes>
+			<class
+				name="test.info.novatec.inspectit.excludedclass.NotExcludedClassLevel1" />
+		</classes>
+	</test>
+	<test name="Invocation Sequence Features">
+		<classes>
+			<class
+				name="test.info.novatec.inspectit.invocationsequence.InvocationSequence" />
+		</classes>
+	</test>
+	<test name="Timer Features">
+		<classes>
+			<class
+				name="test.info.novatec.inspectit.timer.Timer" />
+		</classes>
+	</test>
+	<test name="CoreClass Features">
+		<classes>
+			<class
+				name="test.info.novatec.inspectit.coreclassinstrumentation.CoreClassTest" />
+		</classes>
+	</test>
+	<test name="ContextCapturing Features">
+		<classes>
+			<class
+				name="test.info.novatec.inspectit.contextcapturing.ContextCapturingTest" />
+		</classes>
+	</test>
+	<test name="Log4J Logging Features">
+		<classes>
+			<class
+				name="test.info.novatec.inspectit.logging.Log4JLoggingFeature" />
+		</classes>
+	</test>
+	
+</suite>
