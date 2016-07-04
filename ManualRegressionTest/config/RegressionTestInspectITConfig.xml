@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration-interface-import-data xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <profiles>
+        <profile common="false" active="true" default="false" id="98077590-6fe5-443e-ae4a-eb2f031198d6" name="[Regression Test] JMX Java" created-on="2016-07-01T12:47:00.070+02:00" updated-on="2016-07-04T15:30:25.516+02:00" revision="15">
+            <jmx-definition-profile-data>
+                <jmx-bean-assignment domain="java*">
+                    <object-name-parameters>
+                        <entry>
+                            <key>name</key>
+                            <value>*</value>
+                        </entry>
+                        <entry>
+                            <key>type</key>
+                            <value>*</value>
+                        </entry>
+                    </object-name-parameters>
+                    <attributes/>
+                </jmx-bean-assignment>
+            </jmx-definition-profile-data>
+        </profile>
+        <profile common="false" active="true" default="false" id="9613eb55-7faa-4b55-8e24-923d36c0ee2e" name="[Regression Test] Exclude" description="Exclude classes profile for the manual regression tests." created-on="2016-07-04T13:52:22.379+02:00" updated-on="2016-07-04T13:52:37.413+02:00" revision="2">
+            <exclude-rules-profile-data>
+                <exclude-rule class-name="test.info.novatec.inspectit.excludedclass.ExcludedClassLevel2"/>
+            </exclude-rules-profile-data>
+        </profile>
+        <profile common="false" active="true" default="false" id="e52ceae3-1250-4087-ba06-65c4e88a28f4" name="[Regression Test] All sensors" created-on="2016-07-04T13:45:50.157+02:00" updated-on="2016-07-04T14:00:42.943+02:00" revision="12">
+            <sensor-assignment-profile-data>
+                <charting-method-sensor-assignment charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.HttpSensorConfig" method-name="httpGetDifferentURLs" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.http.HttpFeatures" superclass="false" interface="false"/>
+                <charting-method-sensor-assignment charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.HttpSensorConfig" method-name="httpPostDifferentURLs" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.http.HttpFeatures" superclass="false" interface="false"/>
+                <charting-method-sensor-assignment charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.HttpSensorConfig" method-name="httpHeadersGet" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.http.HttpFeatures" superclass="false" interface="false"/>
+                <charting-method-sensor-assignment charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.HttpSensorConfig" method-name="httpHeadersPost" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.http.HttpFeatures" superclass="false" interface="false"/>
+                <charting-method-sensor-assignment charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.HttpSensorConfig" method-name="httpGetParameters" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.http.HttpFeatures" superclass="false" interface="false"/>
+                <charting-method-sensor-assignment charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.HttpSensorConfig" method-name="httpsGetParameters" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.http.HttpFeatures" superclass="false" interface="false"/>
+                <charting-method-sensor-assignment charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.HttpSensorConfig" method-name="httpPostParameters" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.http.HttpFeatures" superclass="false" interface="false"/>
+                <charting-method-sensor-assignment charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.HttpSensorConfig" method-name="httpsPostParameters" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.http.HttpFeatures" superclass="false" interface="false"/>
+                <charting-method-sensor-assignment charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.HttpSensorConfig" method-name="httpSessionParametersGet" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.http.HttpFeatures" superclass="false" interface="false"/>
+                <charting-method-sensor-assignment charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.HttpSensorConfig" method-name="httpSessionParametersPost" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.http.HttpFeatures" superclass="false" interface="false"/>
+                <charting-method-sensor-assignment charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.HttpSensorConfig" method-name="sendGetHttp" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.http.HttpFeatures" superclass="false" interface="false"/>
+                <charting-method-sensor-assignment charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.HttpSensorConfig" method-name="sendPostHttp" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.http.HttpFeatures" superclass="false" interface="false"/>
+                <charting-method-sensor-assignment charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.HttpSensorConfig" method-name="httpUsecaseHeaderAggregation" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.http.HttpFeatures" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="true" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="*" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.contextcapturing.ContextCapturingTest" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="contextCapturing1" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.contextcapturing.ContextCapturingTest" superclass="false" interface="false">
+                    <context-captures>
+                        <return-capture display-name="return"/>
+                    </context-captures>
+                </timer-method-sensor-assignment>
+                <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="contextCapturing2" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.contextcapturing.ContextCapturingTest" superclass="false" interface="false">
+                    <context-captures>
+                        <parameter-capture index="0" display-name="FirstParameter"/>
+                        <parameter-capture index="1" display-name="SecondParameter"/>
+                        <field-capture field-name="value" display-name="Value"/>
+                    </context-captures>
+                </timer-method-sensor-assignment>
+                <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="contextCapturingTest" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.contextcapturing.ContextCapturingTest" superclass="false" interface="false">
+                    <context-captures>
+                        <field-capture field-name="value" display-name="Value"/>
+                        <field-capture field-name="sub" display-name="Fields">
+                            <paths>
+<path>sub1</path>
+                            </paths>
+                        </field-capture>
+                    </context-captures>
+                </timer-method-sensor-assignment>
+                <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="contextCapturingString" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.contextcapturing.ContextCapturingTest" superclass="false" interface="false">
+                    <context-captures>
+                        <parameter-capture index="0" display-name="String"/>
+                    </context-captures>
+                </timer-method-sensor-assignment>
+                <timer-method-sensor-assignment starts-invocation="true" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="coreClassTest" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.coreclassinstrumentation.CoreClassTest" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="true" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="callExcludedClass" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.excludedclass.NotExcludedClassLevel1" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="true" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="simpleOutput" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.excludedclass.NotExcludedClassLevel3" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="true" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="testSimpleInvocationSequence" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.invocationsequence.InvocationSequence" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="true" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="testSteppingFeature" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.invocationsequence.InvocationSequence" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="true" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="testSteppingFeatureSQL" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.invocationsequence.InvocationSequence" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="true" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="noInvocationSequenceSensortests" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.invocationsequence.InvocationSequence" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="true" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="invocationSequenceSensortests" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.invocationsequence.InvocationSequence" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="true" min-invocation-duration="0" charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="testMinDurationInvocationSequence" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.invocationsequence.InvocationSequence" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="*" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.invocationsequence.InvocationSequence" superclass="false" interface="true"/>
+                <timer-method-sensor-assignment starts-invocation="true" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="entryToLog4JLogging" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.logging.Log4JLoggingFeature" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="*" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.sql.*" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="true" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="start" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="*SQLInInvocation" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="query" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="*SQLInInvocation" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="*" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.timer.*" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="timerWithCharting" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="test.info.novatec.inspectit.timer.Timer" superclass="false" interface="false"/>
+                <timer-method-sensor-assignment starts-invocation="true" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="simpleOutput" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="DefaultPackageTestFile" superclass="false" interface="false"/>
+                <exception-sensor-assignment class-name="test.info.novatec.inspectit.exceptions.CauseException" superclass="false" interface="false"/>
+                <exception-sensor-assignment class-name="test.info.novatec.inspectit.exceptions.MainException" superclass="false" interface="false"/>
+                <exception-sensor-assignment class-name="test.info.novatec.inspectit.exceptions.Level1SubException" superclass="false" interface="false"/>
+                <exception-sensor-assignment class-name="test.info.novatec.inspectit.exceptions.Level2SubException" superclass="false" interface="false"/>
+                <exception-sensor-assignment class-name="test.info.novatec.inspectit.invocationsequence.FakeException" superclass="false" interface="false"/>
+            </sensor-assignment-profile-data>
+        </profile>
+    </profiles>
+    <environments>
+        <environment id="bf616ed8-87be-4b91-87bb-e66ee940a2a1" name="[Regression Test] Environment" description="Environment for the regression tests, includes all the needed profiles and sensor configurations." created-on="2016-07-04T14:02:36.555+02:00" updated-on="2016-07-04T16:02:08.883+02:00" revision="6">
+            <time-sending-strategy-config time="5000"/>
+            <simple-buffer-strategy-config/>
+            <platform-sensor-configs>
+                <class-loading-sensor-config active="true"/>
+                <compilation-sensor-config active="true"/>
+                <cpu-sensor-config active="true"/>
+                <memory-sensor-config active="true"/>
+                <runtime-sensor-config active="true"/>
+                <system-sensor-config active="true"/>
+                <thread-sensor-config active="true"/>
+            </platform-sensor-configs>
+            <method-sensor-configs>
+                <connection-sensor-config/>
+                <http-sensor-config sessionCapture="true" string-length="500"/>
+                <invocation-sequence-sensor-config string-length="100"/>
+                <prepared-statement-parameter-sensor-config/>
+                <prepared-statement-sensor-config string-length="1000"/>
+                <statement-sensor-config string-length="1000"/>
+                <timer-sensor-config string-length="100"/>
+                <log4j-logging-sensor-config minLevel="WARN"/>
+            </method-sensor-configs>
+            <exception-sensor-config enhanced="true" string-length="500"/>
+            <jmx-loading-sensor-config/>
+            <profile-ids>
+                <profile-id>98077590-6fe5-443e-ae4a-eb2f031198d6</profile-id>
+                <profile-id>logging-log4j</profile-id>
+                <profile-id>sql</profile-id>
+                <profile-id>sql-parameters</profile-id>
+                <profile-id>http</profile-id>
+                <profile-id>exclude-classes</profile-id>
+                <profile-id>9613eb55-7faa-4b55-8e24-923d36c0ee2e</profile-id>
+                <profile-id>e52ceae3-1250-4087-ba06-65c4e88a28f4</profile-id>
+            </profile-ids>
+            <classLoadingDelegation>true</classLoadingDelegation>
+        </environment>
+    </environments>
+</configuration-interface-import-data>
