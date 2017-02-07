@@ -2,6 +2,7 @@ package test.info.novatec.inspectit.http.tools;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Collection;
 import java.util.Locale;
 
 import javax.servlet.ServletOutputStream;
@@ -10,12 +11,21 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * Mock for responses
- * 
+ *
  * @author Alfred Kraus
  */
 public class SampleHttpResponse implements HttpServletResponse {
 
 	public static final SampleHttpResponse INST = new SampleHttpResponse();
+
+	private int status;
+
+	/**
+	 *
+	 */
+	public SampleHttpResponse() {
+		status = 200;
+	}
 
 	@Override
 	public String getCharacterEncoding() {
@@ -151,9 +161,42 @@ public class SampleHttpResponse implements HttpServletResponse {
 
 	@Override
 	public void setStatus(int sc) {
+		status = sc;
 	}
 
 	@Override
 	public void setStatus(int sc, String sm) {
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public int getStatus() {
+		return status;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String getHeader(String name) {
+		return null;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public Collection<String> getHeaders(String name) {
+		return null;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public Collection<String> getHeaderNames() {
+		return null;
 	}
 }

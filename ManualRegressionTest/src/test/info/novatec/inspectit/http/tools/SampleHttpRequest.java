@@ -4,29 +4,44 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.Principal;
+import java.util.Collection;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Vector;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import javax.servlet.AsyncContext;
+import javax.servlet.DispatcherType;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 import javax.servlet.ServletInputStream;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
 
 /**
  * Providing a fake request. Only methods instrumented through inspectIT are
  * implemented
- * 
+ *
  * @author Alfred Kraus
  */
 @SuppressWarnings({ "rawtypes", "unchecked" })
 public class SampleHttpRequest implements HttpServletRequest {
 
+	private String scheme;
+	private String serverName;
+	private int serverPort;
 	private String uri;
+	private String queryString;
 	private String method;
 	private Map<String, String[]> parameters = new HashMap<>();
 	private Map<String, String> attributes = new HashMap<>();
@@ -37,8 +52,33 @@ public class SampleHttpRequest implements HttpServletRequest {
 	private Vector headerNamesVector = new Vector();
 	private MockSession test;
 
-	public SampleHttpRequest(String uri, String method) {
+	public SampleHttpRequest(String scheme, String serverName, int serverPort, String uri, String queryString, String method) {
+		this.scheme = scheme;
+		this.serverName = serverName;
+		this.serverPort = serverPort;
 		this.uri = uri;
+		this.queryString = queryString;
+		this.method = method;
+	}
+
+	public SampleHttpRequest(String url, String method) {
+		Pattern p = Pattern.compile("(http(s)?)://([^:/?]+)(:([0-9]+))?(/[^?]*)?(\\?(.+))?"); // (/[^?].*)?.*
+		Matcher m = p.matcher(url);
+
+		// split url in separate parts
+		if (m.find()) {
+			scheme = m.group(1);
+			serverName = m.group(3);
+			if (m.group(5) != null) {
+				serverPort = Integer.parseInt(m.group(5));
+			}
+			this.uri = m.group(6);
+			queryString = m.group(8);
+		} else {
+			// fallback
+			this.uri = url;
+		}
+
 		this.method = method;
 	}
 
@@ -145,17 +185,17 @@ public class SampleHttpRequest implements HttpServletRequest {
 
 	@Override
 	public String getScheme() {
-		return null;
+		return scheme;
 	}
 
 	@Override
 	public String getServerName() {
-		return null;
+		return serverName;
 	}
 
 	@Override
 	public int getServerPort() {
-		return 0;
+		return serverPort;
 	}
 
 	@Override
@@ -290,7 +330,7 @@ public class SampleHttpRequest implements HttpServletRequest {
 
 	@Override
 	public String getQueryString() {
-		return null;
+		return queryString;
 	}
 
 	@Override
@@ -341,6 +381,114 @@ public class SampleHttpRequest implements HttpServletRequest {
 	@Override
 	public boolean isRequestedSessionIdFromUrl() {
 		return false;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public ServletContext getServletContext() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public AsyncContext startAsync() throws IllegalStateException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public AsyncContext startAsync(ServletRequest servletRequest, ServletResponse servletResponse) throws IllegalStateException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public boolean isAsyncStarted() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public boolean isAsyncSupported() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public AsyncContext getAsyncContext() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public DispatcherType getDispatcherType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public boolean authenticate(HttpServletResponse response) throws IOException, ServletException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public void login(String username, String password) throws ServletException {
+		// TODO Auto-generated method stub
+
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public void logout() throws ServletException {
+		// TODO Auto-generated method stub
+
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public Collection<Part> getParts() throws IOException, ServletException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public Part getPart(String name) throws IOException, ServletException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
